@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "lint": "./node_modules/.bin/eslint ./js",
-    "trash": "rimraf ../dist",
+    "trash": "rimraf ../docs",
     "prepare": "npm run lint && npm run trash",
     "dev": "webpack-dev-server",
     "prod": "npm run prepare && webpack --env=prod"
