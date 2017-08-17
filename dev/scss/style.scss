@@ -30,10 +30,17 @@ body {
   width: 100vw;
   height: 100%;
   padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
+  }
+  .github-button {
+
   }
 }
