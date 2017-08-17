@@ -1,0 +1,55 @@
+.ptr {
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(0, 0, 0);
+  max-height: 2rem;
+
+  .arrow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, -0.5rem);
+
+    svg {
+      width: 18px;
+      transition: transform 250ms;
+    }
+  }
+  .loading {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 32px;
+    }
+  }
+
+  &.ptr-pulling {
+    
+    .arrow {
+      display: flex;
+    }
+  }
+  &.ptr-ready {
+    
+    .arrow  {
+      display: flex;
+      
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &.ptr-loading {
+
+    .loading {
+      display: flex;
+    }
+  }
+  &.ptr-done {
+    transition: height 250ms;
+  }
+}

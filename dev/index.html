@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">  
+  <title>TYPTR</title>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <div class="ptr">
+      <div class="arrow">
+        <svg viewBox="0 0 512 512" :fill="style.secondary">
+          <path d="M277.375,85v259.704l119.702-119.702L427,256L256,427L85,256l29.924-29.922l119.701,118.626V85H277.375z"/>
+        </svg>
+      </div>
+  
+      <div class="loading">
+        <svg viewBox="0 0 32 32" :fill="style.secondary">
+          <circle transform="translate(8 0)" cx="0" cy="16" r="0"> 
+            <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0"
+              keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline"/>
+          </circle>
+          <circle transform="translate(16 0)" cx="0" cy="16" r="0"> 
+            <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.3"
+              keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline"/>
+          </circle>
+          <circle transform="translate(24 0)" cx="0" cy="16" r="0"> 
+            <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.6"
+              keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+
+    <div class="content" :style="{backgroundColor: style.primary, color: style.secondary}">
+      <h1 v-if="isTouch">Pull down to refresh</h1>
+      <h1 v-else>View demo on touch enabled device</h1>
+    </div>
+  </div>
+</body>
+</html>

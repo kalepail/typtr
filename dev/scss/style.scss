@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import "../fonts/**/*.css";
+
+@import "./vamp/*.scss";
+@import "./vendor/*.scss";
+@import "./elements/*.scss";
+@import "./pages/*.scss";
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  font-size: 16px;
+  height: 100%;
+}
+html {
+  text-size-adjust: none;
+}
+body {
+  font-family: $font-family;
+}
+[v-cloak] {
+  display: none;
+}
+#app {
+  height: 100%;
+}
+.content {
+  width: 100vw;
+  height: 100%;
+  padding: 2rem 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
